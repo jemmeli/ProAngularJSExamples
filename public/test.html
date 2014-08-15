@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="testApp">
+<head>
+    <title>First Test</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script>
+	    var model = {
+            test: "testDDing"
+        };
+
+        var testApp = angular.module("testApp", []);
+        
+        testApp.controller("TestCtrl", function ($scope) {
+            $scope.model = model;
+        });
+        
+    </script>
+</head>
+<body ng-controller="TestCtrl">
+    <div class="btn btn-default">{{model.test}}</div>
+    <div class="btn btn-success">Bootstrap</div>
+</body>
+</html>
